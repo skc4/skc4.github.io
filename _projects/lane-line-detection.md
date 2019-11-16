@@ -32,10 +32,14 @@ There are two types of distortion in this set of calibration images.
 
 | Tangential    | Radial           |
 |:-------------:|:-------------:|
-| ![](/images/lane-finding/calibration1.jpg)     | ![](/images/lane-finding/calibration1.jpg)|
+| ![](/images/lane-finding/calibration2.jpg)     | ![](/images/lane-finding/calibration1.jpg)|
 | ![](/images/lane-finding/tangential_distortion_formula.png)     | ![](/images/lane-finding/radial_distortion_formula.png)      |
 
-The `undistort` method takes in as input parameters an array of paths to chessboard images and the number of inside corners in the x and y axis. 
+The `undistort` method takes in as input parameters an array of paths to chessboard images and the number of inside corners in the x and y axis.  
+
+So for each image path:
+* images are converted to grayscale using `cv2.cvtColor`
+* chessboard corners are found using `cv2.findChessboardCorners`
 
 
 
