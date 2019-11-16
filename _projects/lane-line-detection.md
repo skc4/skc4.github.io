@@ -90,9 +90,9 @@ Using scipy.signal's `find_peaks_cwt()` lane line pixels are calculated. Then us
 
 ### Finding curvature and vehicle position
 
-|   |    Curvature of 2nd order polynomial |     |
-|:-------------:|:-------------:|:-------------:|
-|  | ![](/images/lane-finding/fcv.png)   |   |
+|Curvature of 2nd order polynomial|
+|:-------------:|
+|![](/images/lane-finding/fcv.png)|
 
 ## See it in Action
 
