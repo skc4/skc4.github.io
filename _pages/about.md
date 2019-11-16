@@ -1,11 +1,11 @@
 ---
-title: About Me
+title: About
 # subtitle: 
 # description: 
 # featured_image: # /images/demo/demo-landscape.jpg
 ---
 
-![](images/profile/profile.png)
+![](images/profile/circle_profile.png)
 
 <!-- ## Features
 
