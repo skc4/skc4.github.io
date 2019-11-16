@@ -27,7 +27,10 @@ The steps of this project are the following:
 
 ### Camera calibration using chessboard images
 A set of chessboard images photographed at different angles were used for this purpose. 
-![](/images/lane-finding/1.png)
+
+<p align="center">
+  <img width="600" height="500" src="../images/lane-finding/1.png">
+</p>
 
 There are two types of distortion in this set of calibration images.
 
@@ -91,12 +94,9 @@ Using scipy.signal's `find_peaks_cwt()` lane line pixels are calculated. Then us
 ### Finding curvature and vehicle position
 
 <p align="center">
-  <img width="200" height="100" src="../images/lane-finding/fcv.png">
+  <img width="300" height="150" src="../images/lane-finding/fcv.png">
 </p>
 
-|Curvature of 2nd order polynomial|
-|:-------------:|
-|![](/images/lane-finding/fcv.png)|
 
 ## See it in Action
 
