@@ -1,7 +1,7 @@
 ---
 title: 'Drivable Area'
 subtitle: 'A pipeline to identify the lane boundaries in a video from a front-facing camera on a car.'
-date: #2019-06-30 00:00:00
+date: 2019-11-16 00:00:00
 description:
 featured_image:
 ---
