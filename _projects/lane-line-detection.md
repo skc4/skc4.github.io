@@ -35,12 +35,15 @@ There are two types of distortion in this set of calibration images.
 | ![](/images/lane-finding/calibration2.jpg)     | ![](/images/lane-finding/calibration1.jpg)|
 | ![](/images/lane-finding/tangential_distortion_formula.png)     | ![](/images/lane-finding/radial_distortion_formula.png)      |
 
-The `undistort` method takes in as input parameters an array of paths to chessboard images and the number of inside corners in the x and y axis.  
-
 So for each image path:
-* images are converted to grayscale using `cv2.cvtColor`
+* image is converted to grayscale using `cv2.cvtColor`
 * chessboard corners are found using `cv2.findChessboardCorners`
 
+Once the chessboard corners are found, `cv2.calibrateCamera` is called to obtain the calibration value that will be used to undistort our video images. 
+
+### Distortion correction
+Using `cv2.undistort`, the chessboard images can be undistorted.
+![](/images/lane-finding/2_undistort.png)
 
 
 ## See it in Action
