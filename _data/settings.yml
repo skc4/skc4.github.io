@@ -59,9 +59,9 @@ social_settings:
 color_settings:
   background_color: '#0a1a34' # ffffff
   background_alt_color: '#09172e' # F5F7FA
-  text_dark_color: '#eaecee' # 2A2F36
-  text_medium_color: '#c2c6cd' # 6C7A89
-  text_light_color: '#f6f7f8' # ABB7B7
+  text_dark_color: '#ffffff' # 2A2F36
+  text_medium_color: '#f6f7f8' # 6C7A89
+  text_light_color: '#eeeff1' # ABB7B7
   accent_color: '#8ce6d1' #0C5DF2
   border_color: '#223048' # dddddd
   overlay_background_color: '#8ce6d1' #0C5DF2
