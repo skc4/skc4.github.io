@@ -5,7 +5,7 @@ title: About
 # featured_image: # /images/demo/demo-landscape.jpg
 ---
 
-![](images/profile/circle_profile1.png)
+![](images/profile/profile.png)
 
 <!-- ## Features
 
