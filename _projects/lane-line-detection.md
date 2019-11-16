@@ -22,6 +22,7 @@ The steps of this project are the following:
 #### Tech Stack
 * Python
 * NumPy
+* Scipy
 * OpenCV
 
 ### Camera calibration using chessboard images
@@ -79,6 +80,19 @@ def transform_image(img,size,src,dst):
 |:-------------:|:-------------:|
 | ![](/images/lane-finding/pt_1.png)     | ![](/images/lane-finding/pt_2.png)|
 
+### Finding lane lines
+
+Using scipy.signal's `find_peaks_cwt()` lane line pixels are calculated. Then using sliding window search, found peaks are then connected to form lines. 
+
+| Sliding Window Search    | Peaks Connected            |
+|:-------------:|:-------------:|
+| ![](/images/lane-finding/fll_1.png)     | ![](/images/lane-finding/fll_2.png)|
+
+### Finding curvature and vehicle position
+
+|   |    Curvature of 2nd order polynomial |     |
+|:-------------:|:-------------:|:-------------:|
+|  | ![](/images/lane-finding/fcv.png)   |   |
 
 ## See it in Action
 
