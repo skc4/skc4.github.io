@@ -100,4 +100,6 @@ Using scipy.signal's `find_peaks_cwt()` lane line pixels are calculated. Then us
 
 ## See it in Action
 
-<iframe width="1905" height="763" src="https://www.youtube.com/embed/ng9edgddoms" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p align="center">
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/ng9edgddoms" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
