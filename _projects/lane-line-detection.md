@@ -42,10 +42,24 @@ So for each image path:
 Once the chessboard corners are found, `cv2.calibrateCamera` is called to obtain the calibration value that will be used to undistort our video images. 
 
 ### Distortion correction
-Using `cv2.undistort`, the chessboard images can be undistorted.
-|![](/images/lane-finding/2_undistort.png)
 
-sdf
+Using `cv2.undistort`, the chessboard images can be undistorted.
+
+![](/images/lane-finding/2_undistort.png)
+
+### Thresholded binary image
+
+Filters used:
+* Gradient on x and y axis with sobel filter size of 5
+* HSV for yellow lane lines
+* RGB for white lane lines
+* S channel with a mask to suppress shadow
+
+These thresholds are combined using logical `OR`.
+
+| Original    | Thresholded           |
+|:-------------:|:-------------:|
+| ![](/images/lane-finding/binary1.png)     | ![](/images/lane-finding/binary2.png)|
 
 ## See it in Action
 
