@@ -11,5 +11,4 @@ featured_image: 'images/lane-finding/car_lanes.jpg'
 ## Demo content
 
 
-
-<iframe src="https://youtu.be/ng9edgddoms" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe width="1905" height="763" src="https://www.youtube.com/embed/ng9edgddoms" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
