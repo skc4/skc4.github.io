@@ -63,6 +63,21 @@ These thresholds are combined using logical `OR`.
 |:-------------:|:-------------:|
 | ![](/images/lane-finding/binary1.png)     | ![](/images/lane-finding/binary2.png)|
 
+### Perspective transform
+
+From an image frame, coordinates are selected in a shape of a trapezoid. The destination coordinates, in a shape of rectangle, are selected. Using `cv2.getPerspectiveTransform`, perspective transform *M* and inverse perspective transform *Minv* are calculated, which then will be used for image transformation.
+
+```python
+def transform_image(img,size,src,dst):
+    M = cv2.getPerspectiveTransform(src,dst)
+    Minv = cv2.getPerspectiveTransform(dst,src)
+    warped_image = cv2.warpPerspective(img,M,size,flags=cv2.INTER_LINEAR)
+    return warped_image, M, Minv
+```
+
+| Original    | Transformed           |
+|:-------------:|:-------------:|
+| ![](/images/lane-finding/pt_1.png)     | ![](/images/lane-finding/pt_2.png)|
 
 
 ## See it in Action
