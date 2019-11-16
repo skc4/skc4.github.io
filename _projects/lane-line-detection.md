@@ -93,10 +93,54 @@ Using scipy.signal's `find_peaks_cwt()` lane line pixels are calculated. Then us
 
 ### Finding curvature and vehicle position
 
+The curvature of 2nd order polnomial can be calculated with:
+
 <p align="center">
   <img width="300" height="150" src="../images/lane-finding/fcv.png">
 </p>
 
+```python
+def curvature_radius (leftx, rightx, img_shape, xm_per_pix=3.7/800, ym_per_pix = 25/720):
+    ploty = np.linspace(0, img_shape[0] - 1, img_shape[0])
+    
+    leftx = leftx[::-1]  # Reverse to match top-to-bottom in y
+    rightx = rightx[::-1]  # Reverse to match top-to-bottom in y
+    
+    # Fit a second order polynomial to pixel positions in each lane line
+    left_fit = np.polyfit(ploty, leftx, 2)
+    left_fitx = left_fit[0]*ploty**2 + left_fit[1]*ploty + left_fit[2]
+    right_fit = np.polyfit(ploty, rightx, 2)
+    right_fitx = right_fit[0]*ploty**2 + right_fit[1]*ploty + right_fit[2]
+
+    # Define conversions in x and y from pixels space to meters
+    ym_per_pix = 25/720 # meters per pixel in y dimension
+    xm_per_pix = 3.7/800 # meters per pixel in x dimension
+
+    # Fit new polynomials to x,y in real space
+    y_eval = np.max(ploty)
+    left_fit_cr = np.polyfit(ploty*ym_per_pix, leftx*xm_per_pix, 2)
+    right_fit_cr = np.polyfit(ploty*ym_per_pix, rightx*xm_per_pix, 2)
+    
+    # Calculate the new radii of curvature
+    left_curverad = ((1 + (2*left_fit_cr[0]*y_eval*ym_per_pix + left_fit_cr[1])**2)**1.5) / np.absolute(2*left_fit_cr[0])
+    right_curverad = ((1 + (2*right_fit_cr[0]*y_eval*ym_per_pix + right_fit_cr[1])**2)**1.5) / np.absolute(2*right_fit_cr[0])
+    
+    # Curvature and radius in meters
+    return (left_curverad, right_curverad)
+```
+
+With the average of the two polynomials (bottom portion), mid point is calculated to determine the vehicle's position since the camera is assumed to be attached in the middle of the vehicle. 
+
+### Warp onto the original image
+
+ To draw the boundaries onto the original image:
+ 1. Curves are drawn on a blank image.
+ 2. Lane area are drawn by invoking `cv2.fillPoly`.
+ 3. Using the inverse perspective matrix *Minv*, the lane area will be warped onto the original image space.
+
+| Original    | Lane Area Drawn           |
+|:-------------:|:-------------:|
+| ![](/images/lane-finding/woi_1.png)     | ![](/images/lane-finding/woi_2.png)|
 
 ## See it in Action
 
