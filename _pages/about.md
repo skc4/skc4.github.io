@@ -8,5 +8,6 @@ title: About
 ![](images/profile/profile.png)
 
 ## Who Am I?
-Exploring new technologies and building software to solve real-world problems is my passion. Learning about **machine learning** and taking it a step further is my lifelong goal. 
+I'm a software engineer based in the San Jose, CA
 
+Exploring new technologies and building software to solve real-world problems is my passion. Learning about <span style="color:red">**machine learning**</span> and taking it a step further is my lifelong goal. 
