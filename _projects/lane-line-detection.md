@@ -40,10 +40,10 @@ There are two types of distortion in this set of calibration images.
 | ![](/images/lane-finding/tangential_distortion_formula.png)     | ![](/images/lane-finding/radial_distortion_formula.png)      |
 
 So for each image path:
-* image is converted to grayscale using `cv2.cvtColor`
-* chessboard corners are found using `cv2.findChessboardCorners`
+* image is converted to grayscale using `cv2.cvtColor()`
+* chessboard corners are found using `cv2.findChessboardCorners()`
 
-Once the chessboard corners are found, `cv2.calibrateCamera` is called to obtain the calibration value that will be used to undistort our video images. 
+Once the chessboard corners are found, `cv2.calibrateCamera()` is called to obtain the calibration value that will be used to undistort our video images. 
 
 ### Distortion correction
 
@@ -135,7 +135,7 @@ With the average of the two polynomials (bottom portion), mid point is calculate
 
  To draw the boundaries onto the original image:
  1. Curves are drawn on a blank image.
- 2. Lane area are drawn by invoking `cv2.fillPoly`.
+ 2. Lane area are drawn by invoking `cv2.fillPoly()`.
  3. Using the inverse perspective matrix *Minv*, the lane area will be warped onto the original image space.
 
 | Original    | Lane Area Drawn           |
