@@ -62,9 +62,9 @@ color_settings:
   text_dark_color: '#2A2F36' # 2A2F36
   text_medium_color: '#6C7A89' # 6C7A89
   text_light_color: '#ABB7B7' # ABB7B7
-  accent_color: '#757575' #0C5DF2
+  accent_color: '#3f51b5' #0C5DF2
   border_color: '#dddddd' # dddddd
-  overlay_background_color: '#424242' #0C5DF2
+  overlay_background_color: '#283593' #0C5DF2
   overlay_text_color: '#ffffff' # ffffff
   overlay_accent_color: '#2A2F36' # 2A2F36
   error_color: '#D64541'
