@@ -60,7 +60,7 @@ color_settings:
   background_color: '#25274D' # ffffff
   background_alt_color: '#464866' # F5F7FA
   text_dark_color: '#ffffff' # 2A2F36
-  text_medium_color: '#AAABB8' # 6C7A89
+  text_medium_color: '#2E9CCA' # 6C7A89
   text_light_color: '#AAABB8' # ABB7B7
   accent_color: '#2E9CCA' #0C5DF2
   border_color: '#29648A' # dddddd
