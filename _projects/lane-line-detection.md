@@ -45,7 +45,9 @@ Once the chessboard corners are found, `cv2.calibrateCamera` is called to obtain
 
 Using `cv2.undistort`, the chessboard images can be undistorted.
 
-![](/images/lane-finding/2_undistort.png)
+| Original    | Corrected           |
+|:-------------:|:-------------:|
+| ![](/images/lane-finding/undistort_1.png)     | ![](/images/lane-finding/undistort_2.png)|
 
 ### Thresholded binary image
 
@@ -60,6 +62,8 @@ These thresholds are combined using logical `OR`.
 | Original    | Thresholded           |
 |:-------------:|:-------------:|
 | ![](/images/lane-finding/binary1.png)     | ![](/images/lane-finding/binary2.png)|
+
+
 
 ## See it in Action
 
