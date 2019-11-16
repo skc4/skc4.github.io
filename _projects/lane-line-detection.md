@@ -43,8 +43,9 @@ Once the chessboard corners are found, `cv2.calibrateCamera` is called to obtain
 
 ### Distortion correction
 Using `cv2.undistort`, the chessboard images can be undistorted.
-![](/images/lane-finding/2_undistort.png)
+|![](/images/lane-finding/2_undistort.png)
 
+sdf
 
 ## See it in Action
 
