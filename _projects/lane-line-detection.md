@@ -24,7 +24,9 @@ The steps of this project are the following:
 * NumPy
 * OpenCV
 
-
+### Camera calibration using chessboard images
+A set of chessboard images photographed at different angles were used for this purpose. 
+![](images/lane-finding/1.png)
 
 ## See it in Action
 
