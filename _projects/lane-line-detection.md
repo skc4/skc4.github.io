@@ -27,9 +27,12 @@ The steps of this project are the following:
 ### Camera calibration using chessboard images
 A set of chessboard images photographed at different angles were used for this purpose. 
 ![](/images/lane-finding/1.png)
-<div class="gallery" data-columns="1">
-	<img src="/images/lane-finding/1.png">
-</div>
+
+There are two types of distortion in this set of calibration images.
+| Tangential    | Radial           |
+|:-------------:|:-------------:|
+| ![](/images/lane-finding/calibration2.jpg)     | ![](/images/lane-finding/calibration1.jpg)|
+| ![](/images/lane-finding/tangential_distortion_formula.png)     | ![](/images/lane-finding/radial_distortion_formula.png)      |
 
 
 
