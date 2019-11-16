@@ -4,10 +4,10 @@ subtitle:
 description: 
 featured_image: # /images/demo/demo-landscape.jpg
 ---
-<!-- 
-![](/images/demo/demo-landscape.jpg)
 
-## Features
+![](/images/profile/profile.jpeg)
+
+<!-- ## Features
 
 Index is packed with powerful features to showcase your work:
 
@@ -26,10 +26,10 @@ Index is packed with powerful features to showcase your work:
 * Built with SEO best practices in mind
 * Customize everything – colors, spacing, fonts, sizes etc. – via a simple settings file
 * Works with GitHub Pages
-* Updated and supported by the developers -->
+* Updated and supported by the developers --> -->
 
 <!-- ## Get Index -->
 
 <!-- Index is created and supported by [Jekyll Themes](https://jekyllthemes.io), and is available for $49.
 
-<a href="https://jekyllthemes.io/theme/index-portfolio-jekyll-theme" class="button button--large">Get This Theme</a> -->
+<a href="https://jekyllthemes.io/theme/index-portfolio-jekyll-theme" class="button button--large">Get This Theme</a>
