@@ -27,7 +27,7 @@ The steps of this project are the following:
 ### Camera calibration using chessboard images
 A set of chessboard images photographed at different angles were used for this purpose. 
 ![](/images/lane-finding/1.png&s=400)
-
+<img src="/images/lane-finding/1.png" width="400" height="400">
 
 ## See it in Action
 
