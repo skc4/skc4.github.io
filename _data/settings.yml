@@ -57,14 +57,14 @@ social_settings:
   linkedin_url: 'https://www.linkedin.com/in/kangcshin/'
 
 color_settings:
-  background_color: '#3AAFA9' # ffffff
-  background_alt_color: '#2B7A78' # F5F7FA
+  background_color: '#FBE8A6' # ffffff
+  background_alt_color: '#F2976C' # F5F7FA
   text_dark_color: '#17252A' # 2A2F36
   text_medium_color: '#FEFFFF' # 6C7A89
-  text_light_color: '#DEF2F1' # ABB7B7
-  accent_color: '#DEF2F1' #0C5DF2
-  border_color: '#3AAFA9' # dddddd
-  overlay_background_color: '#DEF2F1' #0C5DF2
+  text_light_color: '#D2FDFF' # ABB7B7
+  accent_color: '#B4DFE5' #0C5DF2
+  border_color: '#D2FDFF' # dddddd
+  overlay_background_color: '#B4DFE5' #0C5DF2
   overlay_text_color: '#ffffff' # ffffff
   overlay_accent_color: '#2A2F36' # 2A2F36
   error_color: '#D64541'
