@@ -7,6 +7,8 @@ title: About
 
 ![](images/profile/profile.png)
 
+## Who Am I?
+Exploring new technologies and building software to solve real-world problems is my passion. Learning about machine learning and taking it a step further is my lifelong goal. 
 <!-- ## Features
 
 Index is packed with powerful features to showcase your work:
