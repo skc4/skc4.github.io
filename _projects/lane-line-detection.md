@@ -1,6 +1,6 @@
 ---
 title: 'Lane Line Detection'
-subtitle: 'A pipeline to identify the lane boundaries in a video from a front-facing camera on a car.'
+subtitle: 'A pipeline used to identify the lane boundaries in a video from a front-facing camera on a car.'
 date: 2019-11-13 00:00:00
 description:
 featured_image: 'images/lane-finding/car_lanes.jpg'
@@ -9,7 +9,7 @@ featured_image: 'images/lane-finding/car_lanes.jpg'
 ![](/images/lane-finding/lane-finding.gif)
 
 ## Overview
-The steps of this project are the following:
+The steps of this project are follows:
 * Compute the camera calibration matrix and distortion coefficients with a set of chessboard images.
 * Apply a distortion correction to raw images.
 * Use color transforms, gradients, etc., to create a thresholded binary image.
@@ -69,7 +69,7 @@ These thresholds are combined using logical `OR`.
 
 ### Perspective transform
 
-From an image frame, coordinates are selected in a shape of a trapezoid. The destination coordinates, in a shape of rectangle, are selected. Using `cv2.getPerspectiveTransform`, perspective transform *M* and inverse perspective transform *Minv* are calculated, which then will be used for image transformation.
+From an image frame, coordinates are selected in the shape of a trapezoid. The destination coordinates, in the shape of a rectangle, are selected. Using `cv2.getPerspectiveTransform`, perspective transform *M* and inverse perspective transform *Minv* are calculated, which then will be used for image transformation.
 
 ```python
 def transform_image(img,size,src,dst):
@@ -135,7 +135,7 @@ With the average of the two polynomials (bottom portion), mid point is calculate
 
  To draw the boundaries onto the original image:
  1. Curves are drawn on a blank image.
- 2. Lane area are drawn by invoking `cv2.fillPoly()`.
+ 2. Lane area is drawn by invoking `cv2.fillPoly()`.
  3. Using the inverse perspective matrix *Minv*, the lane area will be warped onto the original image space.
 
 | Original    | Lane Area Drawn           |
