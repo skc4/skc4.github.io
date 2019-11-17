@@ -125,4 +125,10 @@ vector<double> getXY(double s, double d, const vector<double> &maps_s,
 }
 ```
 
-### 
+### State machine 
+The state machine used for this purpose is as follows:
+
+<p align="center">
+  <img width="400" height="300" src="../images/path-planning/sm.png">
+</p>
+
