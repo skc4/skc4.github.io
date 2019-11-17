@@ -6,4 +6,6 @@ description:
 featured_image: 'images/path-planning/ppcover.png'
 ---
 
-![](/images/path-planning/ppcover.gif)
+<p align="center">
+  <img width="450" height="350" src="../images/path-planning/ppcover.gif">
+</p>
