@@ -142,7 +142,7 @@ With the average of the two polynomials (bottom portion), mid point is calculate
 |:-------------:|:-------------:|
 | ![](/images/lane-finding/woi_1.png)     | ![](/images/lane-finding/woi_2.png)|
 
-## See it in Action
+### Completed pipeline
 
 <p align="center">
     <iframe width="600" height="400" src="https://www.youtube.com/embed/ng9edgddoms" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
