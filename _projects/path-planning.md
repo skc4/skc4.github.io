@@ -54,7 +54,7 @@ With the help frenet coordinate system, the relative position of a subject can b
 
 | Cartesian    | Frenet        |
 |:-------------:|:-------------:|
-| <img width="250" height="350" src="../images/path-planning/frenet_1.png">   | <img width="250" height="350" src="../images/path-planning/frenet_0.png">|
+| ![](/images/path-planning/frenet_1.png)     | ![](/images/path-planning/frenet_0.png)|
 
 If we were to represent the original road image in cartesian coordinate system with frenet coordinate system, it would be as follows:
 
