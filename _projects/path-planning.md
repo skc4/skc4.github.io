@@ -42,4 +42,12 @@ The waypoints are located in the center of the double-yellow driving line in the
 
 ### Trajectory
 
-When describing location of a subject on a plane, cartesian coordiate system is often used to represent the location with x and y. 
+When describing location of a subject on a plane, cartesian coordinate system is often used to represent the location with x and y. 
+
+In the real world, roads are not always straight and identifying locations of vehicles on curvy roads can be very challenging when using cartesian coordinates.
+
+<p align="center">
+  <img width="250" height="350" src="../images/path-planning/trajectory_1.png">
+</p>
+
+With frenet coordinate system, and describing longitudinal displacement along the road with `S` 
