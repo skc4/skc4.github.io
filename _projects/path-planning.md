@@ -50,4 +50,14 @@ In the real world, roads are not always straight and identifying locations of ve
   <img width="250" height="350" src="../images/path-planning/trajectory_1.png">
 </p>
 
-With frenet coordinate system, and describing longitudinal displacement along the road with `S` 
+With the help frenet coordinate system, the relative position of a subject can be described in terms of longitudinal displacement `S` and lateral displacement `D` along the road, in this case, the double-yellow driving line. Imagin a line that goes along the middle of the road, it which would be S, and how far the subject is from S, which would be D. 
+
+| Cartesian    | Frenet        |
+|:-------------:|:-------------:|
+| <img width="250" height="350" src="../images/path-planning/frenet_1.png">   | <img width="250" height="350" src="../images/path-planning/frenet_0.png">|
+
+If we were to represent the original road image in cartesian coordinate system with frenet coordinate system, it would be as follows:
+
+<p align="center">
+  <img width="250" height="350" src="../images/path-planning/trj1.png">
+</p>
