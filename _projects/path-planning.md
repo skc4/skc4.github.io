@@ -204,7 +204,7 @@ if(change_lane && leftover_waypoint > 2){
 ```
 
 ### Result
-The resulting path planner performs very well, enabling the vehicle to drive around the track without any collisions while maintaining the desired max speed. 
+The resulting path planner performs very well, enabling the vehicle to drive around the track without any collisions while maintaining the desired max speed of 50 mph. 
 
 <p align="center">
     <iframe width="600" height="400" src="https://www.youtube.com/embed/9-lzesHC8Uk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
