@@ -135,7 +135,7 @@ The state machine used for this purpose is as follows:
 
 The vehicle will mostly stay in the **Keep Lane** state but will transition to **Prepare for Lane Change Left/Right** states before actually moving to **Lane Change Left/Right** states and change lanes. These transitional states ensure safe lane changes. 
 
-To implement this state machine, the vehicle first checks if the lane changes are possible by looking to see if there is enough space front and back of the vehicle in the intended lane with **checkToChangeLane()** as shown below:
+To implement this state machine, the vehicle first checks if the lane changes are possible by looking to see if there is enough for the vehicle in the intended lane with **checkToChangeLane()** as shown below:
 
 ```cpp
 bool checkToChangeLane(const int p_value, const double vehicle_s, const double check_lane, const vector<vector<double>> & sensor_fusion_data)
@@ -175,5 +175,38 @@ bool checkToChangeLane(const int p_value, const double vehicle_s, const double c
   return do_change_lane;
 }
 ```
+And once enough space is detected, the state change takes place.
 
- 
+```cpp
+if(change_lane && leftover_waypoint > 2){
+  changed_lane = false;
+  if(myLane != 0 && !changed_lane){
+    start_lane_change = true;
+    start_lane_change = checkToChangeLane(path_length, car_s, myLane - 1, sensor_fusion);
+
+    if(start_lane_change){ 
+      changed_lane = true;
+      myLane -= 1;
+      new_waypoint = next_waypoint;
+    }
+  }
+  if(myLane != 2 && !changed_lane){
+    start_lane_change = true;
+    start_lane_change = checkToChangeLane(path_length, car_s, myLane + 1, sensor_fusion);
+    
+    if(start_lane_change){
+      changed_lane = true;
+      myLane += 1;
+      new_waypoint = next_waypoint;
+    }
+  }
+}
+```
+
+### Result
+The resulting path planner performs very well, enabling the vehicle to drive around the track without any collisions while maintaining the desired max speed. 
+
+<p align="center">
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/9-lzesHC8Uk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
