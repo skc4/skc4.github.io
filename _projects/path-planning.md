@@ -61,7 +61,8 @@ With the help frenet coordinate system, the relative position of a subject can b
 // Transform from Cartesian x,y coordinates to Frenet s,d coordinates
 vector<double> getFrenet(double x, double y, double theta, 
                          const vector<double> &maps_x, 
-                         const vector<double> &maps_y) {
+                         const vector<double> &maps_y) 
+{
   int next_wp = NextWaypoint(x,y, theta, maps_x,maps_y);
   int prev_wp;
   prev_wp = next_wp-1;
