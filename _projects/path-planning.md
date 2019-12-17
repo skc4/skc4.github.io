@@ -133,3 +133,47 @@ The state machine used for this purpose is as follows:
   <img width="400" height="300" src="../images/path-planning/sm.png">
 </p>
 
+The vehicle will mostly stay in the **Keep Lane** state but will transition to **Prepare for Lane Change Left/Right** states before actually moving to **Lane Change Left/Right** states and change lanes. These transitional states ensure safe lane changes. 
+
+To implement this state machine, the vehicle first checks if the lane changes are possible by looking to see if there is enough space front and back of the vehicle in the intended lane with **checkToChangeLane()** as shown below:
+
+```cpp
+bool checkToChangeLane(const int p_value, const double vehicle_s, const double check_lane, const vector<vector<double>> & sensor_fusion_data)
+{
+  bool do_change_lane = false;
+  double buffer_front = 100000;
+  double buffer_rear  = -100000;
+
+  for(int i = 0; i < sensor_fusion_data.size(); i++){
+    float d = sensor_fusion_data[i][6];
+    double detected_vehicles = findVehicleLane(d);
+
+    if(detected_vehicles == check_lane){
+      double vx = sensor_fusion_data[i][3];
+      double vy = sensor_fusion_data[i][4];
+      double vehicle_speed = sqrt(vx*vx + vy*vy);
+      double vehicle_s_check = sensor_fusion_data[i][5];
+
+      vehicle_s_check += ((double)p_value * 0.02 * vehicle_speed);
+
+      double dist_s = vehicle_s_check - vehicle_s;
+      double dist_pos = sqrt(dist_s * dist_s);  
+
+      if(dist_s > 0){ 
+        buffer_front = min(dist_s, buffer_front);
+      }
+      else if(dist_s <= 0){
+        buffer_rear = max(dist_s, buffer_rear);
+      }
+    }
+  } 
+
+  if((buffer_front > 20) && (-1 * buffer_rear > 13)) 
+  {
+    do_change_lane = true;
+  }
+  return do_change_lane;
+}
+```
+
+ 
